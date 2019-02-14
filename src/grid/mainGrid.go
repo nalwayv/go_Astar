@@ -113,42 +113,6 @@ func (g Grid) getNeighbours(pos position.Pos) []position.Pos {
 	return neighbours
 }
 
-// func (g *grid) bfs(from, to position.Pos) {
-// 	frontier := make([]position.Pos, 0, 8)
-// 	frontier = append(frontier, from)
-// 	visited := make(map[position.Pos]bool)
-// 	visited[from] = true
-// 	found := false
-
-// 	for len(frontier) > 0 {
-// 		current := frontier[0]
-// 		frontier = frontier[1:]
-
-// 		if current == to {
-// 			found = true
-// 			break
-// 		}
-
-// 		for _, next := range g.getNeighbours(current) {
-// 			if !visited[next] {
-// 				frontier = append(frontier, next)
-// 				visited[next] = true
-
-// 			}
-// 		}
-// 	}
-
-// 	if found {
-// 		fmt.Println("found")
-// 		for k := range visited {
-// 			idx := g.getCell(k.X, k.Y)
-// 			g.cells[idx].sym = "."
-// 		}
-// 	} else {
-// 		fmt.Println("not found")
-// 	}
-// }
-
 // Star ...
 func (g *Grid) Star(from, to position.Pos) ([]position.Pos, bool) {
 	// check if from and to are ok to use
